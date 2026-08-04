@@ -10,13 +10,13 @@ An open-source, lightweight, high-performance host agent written in **Go** that 
 
 ## 🌟 Architectural Features
 
-* ** Ultra-Low Resource Overhead**: Compiled native Go daemon requiring < 15MB RAM footprint.
-* ** Zero-Trust Security**:
+* **Ultra-Low Resource Overhead**: Compiled native Go daemon requiring < 15MB RAM footprint.
+* **Zero-Trust Security**:
   * **JWT Authentication**: Performs 1-time token registration, storing non-replayable JWT credentials.
   * **Unprivileged Process Isolation**: Host agent executes as a daemon while running game server processes under an unprivileged user (`minecraft`/`palworld`).
   * **Command Sanitization**: Prevents execution of destructive console commands (`stop`, `kill`, `shutdown`).
-* ** Real-Time WebSocket Control**: Low-latency bidirectional control loop streaming live console logs, hardware metrics (CPU/RAM), and readiness callbacks to the control plane.
-* ** Multi-Game Engine Support**:
+* **Real-Time WebSocket Control**: Low-latency bidirectional control loop streaming live console logs, hardware metrics (CPU/RAM), and readiness callbacks to the control plane.
+* **Multi-Game Engine Support**:
   * **Java Engine**: Dynamic JDK path resolution and automatic JVM heap sizing (`-Xms`/`-Xmx`).
   * **SteamCMD Engine**: Native Linux binary process runner for dedicated servers (Palworld, Valheim, Rust, ARK).
 
