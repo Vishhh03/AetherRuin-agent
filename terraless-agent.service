@@ -1,0 +1,16 @@
+[Unit]
+Description=TerraLess Host Agent
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+Type=simple
+User=root
+WorkingDirectory=/opt/game
+ExecStart=/usr/local/bin/terraless-agent
+Restart=always
+RestartSec=5s
+LimitNOFILE=65536
+
+[Install]
+WantedBy=multi-user.target
